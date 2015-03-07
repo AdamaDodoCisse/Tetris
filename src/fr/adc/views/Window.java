@@ -29,6 +29,7 @@ public class Window extends JFrame {
     private static final int PLATEFORM_WIDTH = 12;
     private static final int PLATEFORM_HEIGT = 26;
     private static final int PLATEFORM_BOX_SIZE = 20;
+    private static final String TITLE = "T E T R I S";
 
     /**
      * the constructor of game window
@@ -38,11 +39,15 @@ public class Window extends JFrame {
         this.plateform = new Plateform(new Point(3,4) , PLATEFORM_WIDTH , PLATEFORM_HEIGT);
         this.plateformView = new PlateformView(plateform , PLATEFORM_BOX_SIZE);
         this.plateformController = new PlateformController(this.plateformView);
-        add(plateformView);
-        pack();
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        setVisible(true);
+        this.setTitle(TITLE);
+        this.setLayout(new FlowLayout(FlowLayout.LEFT));
+        this.add(plateformView);
+        this.add(new MenuView(200, plateformView.getHeight()));
+        this.setUndecorated(true);
+        this.pack();
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
 
         this.plateformController.start();
     }

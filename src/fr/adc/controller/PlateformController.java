@@ -63,6 +63,10 @@ public class PlateformController implements ActionListener , KeyListener{
                 this.plateformView.getPlateform().setDirection(Direction.ROTATE);break;
             case KeyEvent.VK_SPACE:
                 this.plateformView.getPlateform().setDirection(Direction.DOWN);break;
+            case KeyEvent.VK_DOWN:
+                this.plateformView.getPlateform().setDirection(Direction.DOWN);break;
+            case KeyEvent.VK_ESCAPE:
+                System.exit(0); break;
         }
     }
 

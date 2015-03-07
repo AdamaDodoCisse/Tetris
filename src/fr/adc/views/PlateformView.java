@@ -78,8 +78,8 @@ public class PlateformView extends JPanel {
 
             graphics.setColor(color);
             graphics.fill3DRect(point.x * this.boxSize + this.boxSize/4, point.y * this.boxSize + this.boxSize/4 , this.boxSize/2, this.boxSize/2 , true);
-            graphics.setColor(tetrimino.getColor());
-            graphics.fill3DRect(point.x * this.boxSize + this.boxSize/4 + this.boxSize/8, point.y * this.boxSize + this.boxSize/4  + this.boxSize/8 , this.boxSize/4, this.boxSize/4 , true);
+          //  graphics.setColor(tetrimino.getColor());
+           // graphics.fill3DRect(point.x * this.boxSize + this.boxSize/4 + this.boxSize/8, point.y * this.boxSize + this.boxSize/4  + this.boxSize/8 , this.boxSize/4, this.boxSize/4 , true);
         }
 
         graphics.setColor(color);
